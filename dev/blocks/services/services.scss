@@ -1,0 +1,120 @@
+// В этом файле должны быть стили для БЭМ-блока services, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.services {
+	overflow: hidden;
+	&__inner {
+		position: relative;
+		padding: 130px 0 0 0;
+		@media (min-width: $screen-sm) {
+			padding: 117px 0 0 0;
+		}
+		@media (min-width: $screen-md) {
+			padding: 137px 0 0 0;
+		}
+		@media (min-width: $screen-lg) {
+			padding: 197px 0 0 0;
+		}
+	}
+
+	&__heading {
+		@include heading;
+		color: var(--color-heading);
+		@media (min-width: $screen-sm) {
+			text-align: center;
+		}
+		&::after {
+			left: 0;
+			bottom: -24px;
+			@media (min-width: $screen-sm) {
+				bottom: -30px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	&__heading-descr {
+		@include main-descr;
+		margin: 61px 0 0 0;
+		@media (min-width: $screen-sm) {
+			text-align: center;
+		}
+	}
+
+	&__card {
+		padding: 30px 0 0 0;
+		&_first {
+			padding: 80px 0 0 0;
+			
+		}
+		&_second {
+			@media (min-width: $screen-sm) {
+				padding: 80px 0 0 0;
+			}
+		}
+		&_third {
+			@media (min-width: $screen-md) {
+				padding: 80px 0 0 0;
+			}
+		}
+		&_fourth {}
+		&_fiveth {}
+		&_sixth {}
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		margin: 52px 0 0 0;
+		@media (min-width: $screen-sm) {
+			margin-top: 62px 0 0 0;
+		}
+		@media (min-width: $screen-md) {
+			margin-top: 72px 0 0 0;
+			
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		z-index: -1;
+		&_organic-shape {
+			right: 50%;
+			top: 180px;
+			transform: translateX(200px);
+			@media (min-width: $screen-sm) {
+				top: 120px;
+				transform: translateX(230px);
+			}
+			@media (min-width: $screen-md) {
+				top: 220px;
+				transform: translateX(66px);
+			}
+			@media (min-width: $screen-lg) {
+				top: 340px;
+			}
+		}
+		&_dot-element {
+			left: 50%;
+			transform: translateX(150px);
+			bottom: 445px;
+			width: 107px;
+			height: 93px;
+			@media (min-width: $screen-sm) {
+				width: 107px;
+				height: 93px;
+				transform: translateX(320px);
+			}
+			@media (min-width: $screen-md) {
+				width: 132px;
+				height: 115px;
+				transform: translateX(420px);
+			}
+			@media (min-width: $screen-lg) {
+				transform: translateX(506px);
+			}
+		}
+	}
+	
+}

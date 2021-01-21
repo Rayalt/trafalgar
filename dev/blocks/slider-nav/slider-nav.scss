@@ -1,0 +1,19 @@
+// В этом файле должны быть стили для БЭМ-блока slider-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.slider-nav {
+
+	&__elements {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		margin: 42px 0 0 0;
+	}
+	&__point {
+		//margin: 0 90px;
+		display: flex;
+		justify-content: space-between;
+	}
+}

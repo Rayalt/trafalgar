@@ -1,0 +1,61 @@
+// В этом файле должны быть стили для БЭМ-блока icon, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.icon {
+	&__logo-secondary {
+		width: 41px;
+		height: 41px;
+	}
+
+	&__logo-primary {
+		width: 160px;
+		height: 41px;
+	}
+
+	&__menu {
+		fill: var(--color-blue);
+		width: 65px;
+		height: 65px;
+		padding: 4px;
+	}
+	&__close-menu {
+		fill: var(--color-white);
+		width: 50px;
+		height: 50px;
+		padding: 4px;
+	}
+	&__arrow {
+		width: 26px;
+		height: 16px;
+		margin: 0 0 0 8px;
+		&_download {
+		}
+		&_readmore {
+			transform: rotate(-90deg);
+		}
+	}
+	&__nav-arrow {
+		width: 42px;
+		height: 28px;
+		opacity: .5;
+		&_forward {
+			transform: rotate(-90deg);
+		}
+		&_back {
+			transform: rotate(90deg);
+		}
+		&_active {
+			opacity: 1;
+		}
+	}
+	&__nav-point {
+		width: 10px;
+		height: 10px;
+		opacity: .5;
+		margin: 0 9px;
+		&_active {
+			opacity: 1;
+		}
+	}
+}

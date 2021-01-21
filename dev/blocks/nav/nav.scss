@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.nav {
+	&__item {
+		text-decoration: none;
+		color: var(--color-typography);
+		transition: color .5s ease;
+		& + & {
+			margin: 0 0 0 30px;
+		}
+		@media (min-width: $screen-md) {
+			& + & {
+				margin: 0 0 0 40px;
+			}
+		}
+		&:hover {
+			color: var(--color-active);
+		}
+		&_active {
+			color: var(--color-active);
+		}
+	}
+}

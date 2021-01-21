@@ -1,0 +1,10 @@
+//- Все примеси в этом файле должны начинаться c имени блока (card)
+
+mixin card(vars)
+	each item in vars
+		.card
+			.card__inner
+				.card__icon-wrapper
+					img.card__icon(src='/img/icon__' + item.icon + '.png' alt!= item.alt)
+				h3.card__title!= item.title
+				p.card__card-descr!= item.descr

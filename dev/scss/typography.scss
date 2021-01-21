@@ -1,0 +1,49 @@
+@mixin card-title {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 160%;
+	color: var(--color-heading);
+	@media (min-width: $screen-md) {
+		font-size: 24px;
+	}
+}
+
+@mixin card-descr {
+	font-weight: 300;
+	line-height: 155%;
+	margin: 0;
+	@media (min-width: $screen-md) {
+		font-size: 16px;
+		line-height: 175%;
+	}
+}
+
+@mixin heading {
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 136%;
+	color: var(--color-heading);
+	margin: 0;
+	position: relative;
+	@media (min-width: $screen-md) {
+		font-size: 36px;
+		line-height: 156%;
+	}
+	&::after {
+		content: '';
+		width: 56px;
+		height: 2px;
+		position: absolute;
+		border-radius: 5px;
+		background-color: var(--color-black);
+	}
+}
+
+@mixin main-descr {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 167%;
+	@media (min-width: $screen-md) {
+		font-size: 18px;
+	}
+}

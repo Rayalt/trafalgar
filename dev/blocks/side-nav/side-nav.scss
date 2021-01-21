@@ -1,0 +1,64 @@
+// В этом файле должны быть стили для БЭМ-блока side-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.side-nav {
+	position: fixed;
+	width: 228px;
+	height: 100%;
+	top: 0;
+	z-index: 105;
+	right: -228px;
+	transform: translateX(0);
+	transition: transform .5s ease;
+	background: var(--bg-gradient);
+	.open-nav & {
+		transform: translateX(-228px);
+	}
+	@media (min-width: $screen-sm) {
+		width: 300px;
+		right: -300px;
+		.open-nav & {
+			transform: translateX(-300px);
+		}
+	}
+	@media (min-width: $screen-md) {
+		display: none;
+	}
+	
+	&__inner {
+		padding: 16px 16px 16px 24px;
+		height: 100%;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 20%;
+	}
+
+	&__item {
+		text-decoration: none;
+		color: var(--color-typography-inverse);
+		transition: color .5s ease;
+		& + & {
+			margin: 30px 0 0 0;
+		}
+		&:first-of-type {
+			margin: 10px 0 0 0;
+		}
+		&:hover {
+			color: var(--color-active);
+		}
+		&_active {
+			color: var(--color-active);
+		}
+	}
+}
