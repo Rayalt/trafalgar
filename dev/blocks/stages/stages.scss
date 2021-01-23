@@ -3,18 +3,14 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .stages {
-
 	position: relative;
 	overflow-x: hidden;
 	@media (min-width: $screen-lg) {
 		min-height: 1270px;
 	}
-	// //
 	
 	&__inner {
 		position: relative;
-		//&:nth-of-type(even) {
-		//}
 		&:first-of-type {
 			padding: 330px 0 0 0;
 			@media (min-width: $screen-sm) {
@@ -60,8 +56,22 @@
 	}
 
 	&__btn {
-		display: flex;
+		//height: 56px;
+		width: 200px;
 		margin: 40px 0 0 0;
+		transition: all .5s ease;
+		&:hover {
+			.icon__arrow_download {
+				fill: var(--color-heading);
+				animation: arrow-down 1.2s infinite ease;
+			}
+			.btn__link {
+				color: var(--color-heading);
+			}
+			.btn__bordered {
+				border: 1px solid var(--color-heading);
+			}
+		}
 	}
 
 	&__img-healthcare {
@@ -138,6 +148,17 @@
 			transform: translateX(710px);
 		}
 	}
+}
 
-	
+
+@keyframes arrow-down {
+	0% {
+		top: 1px;
+	}
+	50% {
+		top: 5px;
+	}
+	100% {
+		top: 0px;
+	}
 }

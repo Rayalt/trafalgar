@@ -103,7 +103,7 @@ block content
 			.grid__col.grid__col_lg-1
 				.unit 01
 
-	.overlay
+	//.overlay
 		.grid
 			.grid__row
 				.grid__col.grid__col_sm-1
@@ -186,64 +186,58 @@ block content
 						p.services__heading-descr We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health
 			.grid
 				.grid__row
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.services__card.services__card_first
+					.grid__col.grid__col_sm-12
+						.services__card-row.services__card-row_first
 							+card([
 										{
-												icon: 'search',
-												alt: 'Search icon',
-												title: 'Search doctor',
-												descr: 'Choose your doctor from thousands of specialist, general, and trusted hospitals'
+													icon: 'search',
+													alt: 'Search icon',
+													title: 'Search doctor',
+													descr: 'Choose your doctor from thousands of specialist, general, and trusted hospitals'
 										}
 									])
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.services__card.services__card_second
 							+card([
 										{
-												icon: 'pharmacy',
-												alt: 'Pharmacy icon',
-												title: 'Online pharmacy',
-												descr: 'Buy your medicines with our mobile application with a simple delivery system'
+													icon: 'pharmacy',
+													alt: 'Pharmacy icon',
+													title: 'Online pharmacy',
+													descr: 'Buy your medicines with our mobile application with a simple delivery system'
 										}
 									])
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.services__card.services__card_third
 							+card([
 										{
-												icon: 'consultation',
-												alt: 'Consultation icon',
-												title: 'Consultation',
-												descr: 'Free consultation with our trusted doctors and get the best recomendations'
+													icon: 'consultation',
+													alt: 'Consultation icon',
+													title: 'Consultation',
+													descr: 'Free consultation with our trusted doctors and get the best recomendations'
 										}
 									])
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.services__card.services__card_fourth
+			.grid
+				.grid__row
+					.grid__col.grid__col_sm-12
+						.services__card-row.services__card-row_last
 							+card([
 										{
-												icon: 'info',
-												alt: 'Info icon',
-												title: 'Details info',
-												descr: 'Free consultation with our trusted doctors and get the best recomendations'
+													icon: 'info',
+													alt: 'Info icon',
+													title: 'Details info',
+													descr: 'Free consultation with our trusted doctors and get the best recomendations'
 										}
 									])
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.services__card.services__card_fiveth
 							+card([
 										{
-												icon: 'care',
-												alt: 'Emergency care icon',
-												title: 'Emergency care',
-												descr: 'You can get 24/7 urgent care for yourself or your children and your lovely family'
+													icon: 'care',
+													alt: 'Emergency care icon',
+													title: 'Emergency care',
+													descr: 'You can get 24/7 urgent care for yourself or your children and your lovely family'
 										}
 									])
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.services__card.services__card_sixth
 							+card([
 										{
-												icon: 'tracking',
-												alt: 'Tracking icon',
-												title: 'Tracking',
-												descr: 'Track and save your medical history and health data '
+													icon: 'tracking',
+													alt: 'Tracking icon',
+													title: 'Tracking',
+													descr: 'Track and save your medical history and health data '
 										}
 									])
 			img.services__bg.services__bg_organic-shape(src='/img/img__bg-organic-shape.png' alt='Background element')
@@ -274,8 +268,8 @@ block content
 							.stages__btn
 								.btn.btn__bordered
 									a.btn__link.btn__link_blue(href='#') Download
-									svg.icon.icon__arrow.icon__arrow_download
-										use(xlink:href='/img/svgSprite.svg#icon__arrow')
+										svg.icon.icon__arrow.icon__arrow_download
+											use(xlink:href='/img/svgSprite.svg#icon__arrow')
 			img.stages__img-download(src='/img/img__download.png' alt='')
 		img.stages__bg-element(src='/img/bg__element_blue.png' alt='Background element')
 
@@ -322,8 +316,8 @@ block content
 						h2.articles__heading Check out our latest article
 			.grid
 				.grid__row
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.articles__card
+					.grid__col.grid__col_sm-12
+						.articles__card-row
 							+articles([
 										{
 											img: 'analys',
@@ -332,8 +326,6 @@ block content
 											descr: 'In this case, the role of the health laboratory is very important to do a disease detection...'
 										}
 									])
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.articles__card
 							+articles([
 										{
 											img: 'lab',
@@ -342,8 +334,6 @@ block content
 											descr: 'Herbal medicine is very widely used at this time because of its very good for your health...'
 										}
 									])
-					.grid__col.grid__col_sm-6.grid__col_md-4
-						.articles__card
 							+articles([
 										{
 											img: 'mask',

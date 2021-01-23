@@ -1,14 +1,14 @@
 //- Все примеси в этом файле должны начинаться c имени блока (articles)
 
 mixin articles(vars)
-	each item in vars
-		.articles__img-container
-			img.articles__img(src='/img/img__' + item.img + '_1x.png' srcset='/img/img__' + item.img + '_2x.png' alt!= item.alt)
-		.articles__content
-			h3.articles__title!= item.title
-			p.articles__card-descr!= item.descr
-			.articles__card-btn
-				.btn.btn__ghost
-					a.btn__link.btn__link_blue(href='#') Read more
-					svg.icon.icon__arrow.icon__arrow_readmore
-						use(xlink:href='/img/svgSprite.svg#icon__arrow')
+	.articles__card
+		each item in vars
+			.articles__img-container
+				img.articles__img(src='/img/img__' + item.img + '_1x.png' srcset='/img/img__' + item.img + '_2x.png' alt!= item.alt)
+			.articles__content
+				h3.articles__title!= item.title
+				p.articles__card-descr!= item.descr
+				.articles__card-btn
+					a.articles__link(href='#') Read more
+						svg.icon.icon__arrow.icon__arrow_readmore
+							use(xlink:href='/img/svgSprite.svg#icon__arrow')

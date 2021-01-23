@@ -3,9 +3,6 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .hero {
-
-	
-	//min-height: 100%;
 	overflow-x: hidden;
 	position: relative;
 	@media (min-width: $screen-sm) {
@@ -51,13 +48,22 @@
 		}
 	}
 	&__btn {
-		display: flex;
 		margin: 25px 0 0 0;
+		width: 200px;
+		//height: 56px;
 		@media (min-width: $screen-sm) {
 			margin: 35px 0 0 0;
 		}
 		@media (min-width: $screen-md) {
 			margin: 45px 0 0 0;
+		}
+		&:hover {
+			.btn__link {
+				color: var(--color-heading);
+			}
+			.btn__solid {
+				background-color: var(--color-pink);
+			}
 		}
 		
 	}

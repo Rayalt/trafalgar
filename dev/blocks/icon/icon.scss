@@ -25,10 +25,13 @@
 		height: 50px;
 		padding: 4px;
 	}
+
 	&__arrow {
 		width: 26px;
 		height: 16px;
 		margin: 0 0 0 8px;
+		fill: var(--color-blue);
+		position: relative;
 		&_download {
 		}
 		&_readmore {
@@ -39,6 +42,7 @@
 		width: 42px;
 		height: 28px;
 		opacity: .5;
+		fill: var(--color-blue);
 		&_forward {
 			transform: rotate(-90deg);
 		}

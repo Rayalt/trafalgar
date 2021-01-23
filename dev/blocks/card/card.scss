@@ -8,20 +8,37 @@
 	box-shadow: 10px 40px 50px 0 var(--shadow-color);
 	display: flex;
 	justify-content: space-between;
-	//align-items: flex-start;
 	flex-direction: column;
-	min-height: 354px;
+	& + & {
+		margin: 37px 0 0 0;
+	}
+	@media (min-width: $screen-sm) {
+		width: 208px;
+		& + & {
+			margin: 0;
+		}
+	}
+	@media (min-width: $screen-md) {
+		width: 294px;
+	}
+	@media (min-width: $screen-lg) {
+		width: 368px;
+	}
 
 	&__icon-wrapper {
 		width: 80px;
 		height: 95px;
-		//display: flex;
-		//justify-content: flex-start;
-		//align-items: flex-start;
 	}
 
 	&__inner {
-		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		//justify-content: space-between;
+		height: 100%;
+		padding: 40px 30px 35px 20px;
+		@media (min-width: $screen-md) {
+			padding: 60px 50px 55px 40px;
+		}
 	}
 
 	&__title {
