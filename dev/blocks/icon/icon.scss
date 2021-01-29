@@ -17,7 +17,6 @@
 	&__logo-maxi {
 		width: 160px;
 		height: 41px;
-		
 	}
 
 	&__menu {
@@ -52,17 +51,9 @@
 		transition: all .25s ease;
 		&_forward {
 			transform: rotate(-90deg);
-			//margin: 0 0 0 40px;
-			@media (min-width: $screen-md) {
-				//margin: 0 0 0 90px;
-			}
 		}
 		&_back {
 			transform: rotate(90deg);
-			//margin: 0 40px 0 0;
-			@media (min-width: $screen-md) {
-				//margin: 0 90px 0 0;
-			}
 		}
 		&:hover {
 			opacity: 1;

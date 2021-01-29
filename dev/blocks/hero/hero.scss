@@ -37,6 +37,7 @@
 			font-size: 48px;
 		}
 	}
+
 	&__descr {
 		margin: 15px 0 0 0;
 		font-size: 18px;
@@ -47,6 +48,7 @@
 			margin: 25px 0 0 0;
 		}
 	}
+
 	&__button {
 		margin: 25px 0 0 0;
 		@media (min-width: $screen-sm) {
@@ -56,6 +58,7 @@
 			margin: 45px 0 0 0;
 		}
 	}
+
 	&__img {
 		position: absolute;
 		left: 50%;
@@ -83,6 +86,7 @@
 			transform: translateX(-30px);
 		}
 	}
+
 	&__bg-element {
 		position: absolute;
 		right: 50%;

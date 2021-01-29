@@ -135,18 +135,18 @@
 		&_dot-element {
 			left: 50%;
 			width: 107px;
-			height: 93px;
+			height: auto;
 			top: 150px;
 			transform: translateX(-260px);
 			@media (min-width: $screen-sm) {
 				width: 107px;
-				height: 93px;
+				height: auto;
 				top: 160px;
 				transform: translateX(-400px);
 			}
 			@media (min-width: $screen-md) {
 				width: 132px;
-				height: 115px;
+				height: auto;
 				top: 190px;
 				transform: translateX(-540px);
 			}
@@ -158,17 +158,17 @@
 		&_bottom-dot-element {
 			left: 50%;
 			width: 107px;
-			height: 93px;
+			height: auto;
 			bottom: -40px;
 			transform: translateX(150px);
 			@media (min-width: $screen-sm) {
 				width: 107px;
-				height: 93px;
+				height: auto;
 				transform: translateX(350px);
 			}
 			@media (min-width: $screen-md) {
 				width: 132px;
-				height: 115px;
+				height: auto;
 				transform: translateX(480px);
 			}
 			@media (min-width: $screen-lg) {
