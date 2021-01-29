@@ -14,6 +14,7 @@ let config = {
 		'dev/scss/typography.scss',
 		'dev/scss/reboot.scss',
 		//'dev/scss/fonts.scss',
+		'swiper/swiper-bundle.css',
 		// 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',
 	],
 	'addStyleAfter': [

@@ -1,3 +1,2 @@
-//= ../../node_modules/parallax-js/dist/parallax.js
-//= ../../node_modules/aos/dist/aos.js
+//= ../../node_modules/swiper/swiper-bundle.js
 //= partials/user.js

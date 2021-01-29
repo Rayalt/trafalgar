@@ -4,17 +4,45 @@
 
 .services {
 	overflow: hidden;
+	position: relative;
+	padding: 100px 0 50px 0;
+	@media (min-width: $screen-sm) {
+		padding: 50px 0;
+	}
+	@media (min-width: $screen-md) {
+		padding: 80px 0;
+	}
+	@media (min-width: $screen-lg) {
+		padding: 100px 0;
+	}
+
 	&__inner {
 		position: relative;
-		padding: 130px 0 0 0;
+	}
+
+	&__header {
+		//display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+	}
+
+	&__card-grid {
+		display: grid;
+		width: 100%;
+		margin: 80px 0 0 0;
+		grid-row-gap: 34px;
 		@media (min-width: $screen-sm) {
-			padding: 117px 0 0 0;
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
+			margin: 80px 0 0 0;
+			grid-column-gap: 34px;
 		}
 		@media (min-width: $screen-md) {
-			padding: 137px 0 0 0;
-		}
-		@media (min-width: $screen-lg) {
-			padding: 197px 0 0 0;
+			grid-template-rows: 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-row-gap: 37px;
 		}
 	}
 
@@ -36,16 +64,13 @@
 	&__heading {
 		@include heading;
 		color: var(--color-heading);
-		@media (min-width: $screen-sm) {
-			text-align: center;
-		}
+		text-align: center;
 		&::after {
-			left: 0;
+			left: 50%;
+			transform: translateX(-50%);
 			bottom: -24px;
 			@media (min-width: $screen-sm) {
 				bottom: -30px;
-				left: 50%;
-				transform: translateX(-50%);
 			}
 		}
 	}
@@ -53,31 +78,19 @@
 	&__heading-descr {
 		@include main-descr;
 		margin: 61px 0 0 0;
-		@media (min-width: $screen-sm) {
-			text-align: center;
-		}
+		text-align: center;
 	}
 
-	&__btn {
+	&__button {
 		display: flex;
 		justify-content: center;
-		width: 200px;
-		margin: 52px auto 0 auto;
+		margin: 52px 0 0 0;
 		@media (min-width: $screen-sm) {
-			margin: 62px auto 0 auto;
+			margin: 62px 0 0 0;
 		}
 		@media (min-width: $screen-md) {
-			margin: 72px auto 0 auto;
+			margin: 72px 0 0 0;
 		}
-		&:hover {
-			.btn__link {
-				color: var(--color-heading);
-			}
-			.btn__bordered {
-				border: 1px solid var(--color-heading);
-			}
-		}
-		
 	}
 
 	&__bg {
@@ -85,34 +98,32 @@
 		z-index: -1;
 		&_organic-shape {
 			right: 50%;
-			top: 180px;
+			top: 0;
 			transform: translateX(200px);
 			@media (min-width: $screen-sm) {
-				top: 120px;
 				transform: translateX(230px);
 			}
 			@media (min-width: $screen-md) {
 				transform: translateX(66px);
 			}
-			@media (min-width: $screen-lg) {
-				top: 180px;
-			}
 		}
 		&_dot-element {
 			left: 50%;
 			transform: translateX(150px);
-			bottom: 450px;
+			top: 1462px;
 			width: 107px;
 			height: 93px;
 			@media (min-width: $screen-sm) {
 				width: 107px;
 				height: 93px;
-				transform: translateX(320px);
+				transform: translateX(290px);
+				top: 844px;
 			}
 			@media (min-width: $screen-md) {
 				width: 132px;
 				height: 115px;
-				transform: translateX(420px);
+				transform: translateX(410px);
+				top: 575px;
 			}
 			@media (min-width: $screen-lg) {
 				transform: translateX(506px);

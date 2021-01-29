@@ -4,11 +4,11 @@ mixin articles(vars)
 	.articles__card
 		each item in vars
 			.articles__img-container
-				img.articles__img(src='/img/img__' + item.img + '_1x.png' srcset='/img/img__' + item.img + '_2x.png' alt!= item.alt)
-			.articles__content
-				h3.articles__title!= item.title
+				img.articles__card-img(src='/img/img__' + item.img + '_1x.jpg' srcset='/img/img__' + item.img + '_2x.jpg 2x' alt!= item.alt)
+			.articles__card-content
+				h3.articles__card-title!= item.title
 				p.articles__card-descr!= item.descr
-				.articles__card-btn
-					a.articles__link(href='#') Read more
+				.articles__card-button
+					a.button.button__ghost(href='#') Read more
 						svg.icon.icon__arrow.icon__arrow_readmore
 							use(xlink:href='/img/svgSprite.svg#icon__arrow')
