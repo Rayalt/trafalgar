@@ -1,0 +1,36 @@
+footer.footer
+	.grid
+		.grid__row
+			.grid__col.col-order__xs-2.grid__col_sm-10.grid__col_md-5.grid__col_lg-5
+				.footer__info
+					svg.svg.footer__logo
+						use(xlink:href='/img/svgSprite.svg#icon__logo_primary')
+					p.footer__about Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
+					p.footer__copy ©Trafalgar PTY LTD 2020. All rights reserved
+			.grid__col.grid__col_sm-10.grid__col_md-6.col-order__sm-3.col-offset__md-1.grid__col_lg-6.col-offset__lg-1
+				.footer__links-grid
+					+footer-links('Company',
+						[
+							{link: 'About', href: '#'},
+							{link: 'Testimonials', href: '#'},
+							{link: 'Find a doctor', href: '#'},
+							{link: 'Apps', href: '#'}
+						]
+					)
+					+footer-links('Region',
+						[
+							{link: 'Indonesia', href: '#'},
+							{link: 'Singapore', href: '#'},
+							{link: 'Hongkong', href: '#'},
+							{link: 'Canada', href: '#'}
+						]
+					)
+					+footer-links('Help',
+						[
+							{link: 'Help center', href: '#'},
+							{link: 'Contact support', href: '#'},
+							{link: 'Instructions', href: '#'},
+							{link: 'How it works', href: '#'}
+						]
+					)
+	img.footer__pattern(src='/img/bg__element_blue.png' alt='Background element')

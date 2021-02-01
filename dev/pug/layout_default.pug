@@ -34,12 +34,13 @@ html(class='no-js', lang='ru-RU')
 		noscript У вас отключен JavaScript. Это пугает.
 
 		.page
-			//.page__header
+			.page__header
 				include ../pug/layout_parts_header.pug
 			.page__body
 				block content
-			//.page__footer
+			.page__footer
 				include ../pug/layout_parts_footer.pug
+			.page__blackout
 
 		script(src='/js/main.js')
 		block scripts

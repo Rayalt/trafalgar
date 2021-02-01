@@ -3,34 +3,33 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .header {
-	width: 100%;
 	padding: 16px 0;
+	width: 100%;
 	@media (min-width: $screen-md) {
 		padding: 32px 0;
 	}
 	@media (min-width: $screen-lg) {
 		padding: 56px 0;
 	}
-
 	&__inner {
-	}
-
-	&__content {
-		display: flex;
 		align-items: center;
+		display: flex;
 		justify-content: space-between;
 	}
-
+	&__logo {
+		height: 41px;
+		padding: 4px;
+		width: 41px;
+	}
 	&__nav {
 		display: none;
 		@media (min-width: $screen-md) {
 			display: flex;
 		}
 	}
-
 	&__item {
-		text-decoration: none;
 		color: var(--color-typography);
+		text-decoration: none;
 		transition: color .5s ease;
 		& + & {
 			margin: 0 0 0 30px;
@@ -46,6 +45,10 @@
 		}
 	}
 	&__menu {
+		fill: var(--color-blue);
+		height: 48px;
+		padding: 4px;
+		width: 48px;
 		@media (min-width: $screen-md) {
 			display: none;
 		}

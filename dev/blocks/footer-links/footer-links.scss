@@ -4,36 +4,28 @@
 
 .footer-links {
 	&__list {
+		display: grid;
+		grid-gap: 30px;
 		list-style: none;
-		margin: 0;
+		margin: 40px 0 0 0;
 		padding: 0;
 	}
-
 	&__heading {
 		font-size: 20px;
 		font-weight: 700;
 		line-height: 150%;
 	}
-
-	&__item {
-		&:first-of-type {
-			margin: 40px 0 0 0;
-		}
-		& + & {
-			margin: 30px 0 0 0;
-		}
-	}
-
+	&__item {}
 	&__link {
 		color: var(--color-typography-inverse);
 		display: inline-block;
-		text-decoration: none;
 		font-weight: 300;
 		line-height: 150%;
-		transition: all .5s ease;
-		
+		text-decoration: none;
+		transition: all .25s ease;
 		&:hover {
-			transform: translateY(-5px);
+			font-weight: 700;
+			transform: translateY(-3px);
 		}
 	}
 }

@@ -3,32 +3,29 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .footer {
+	background: var(--bg-gradient);
 	color: var(--color-typography-inverse);
-	&__inner {
-		background: var(--bg-gradient);
-		padding: 80px 0;
-		@media (min-width: $screen-sm) {
-		}
-		@media (min-width: $screen-md) {
-			padding: 109px 0;
-		}
-		position: relative;
-		overflow: hidden;
+	overflow: hidden;
+	padding: 80px 0;
+	position: relative;
+	@media (min-width: $screen-sm) {
 	}
-
+	@media (min-width: $screen-md) {
+		padding: 109px 0;
+	}
 	&__info {
 		display: flex;
 		flex-direction: column;
 		height: 100%;
 	}
-
 	&__logo {
 		flex: 0 0 auto;
-		margin: 80px 0 0 0;
+		height: 41px;
+		margin-top: 80px;
+		width: 160px;
 		@media (min-width: $screen-sm) {
-			margin: 0;
+			margin-top: 0;
 		}
-
 	}
 	&__about {
 		flex: 1 1 auto;
@@ -38,36 +35,33 @@
 		margin: 17px 0 0 0;
 	}
 	&__copy {
+		flex: 0 0 auto;
 		font-size: 16px;
 		font-weight: 300;
 		line-height: 28px;
 		margin: 31px 0 0 0;
-		flex: 0 0 auto;
 	}
-
 	&__links-grid {
 		display: grid;
-		grid-row-gap: 60px;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
 		grid-column-gap: 10px;
+		grid-row-gap: 60px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 		@media (min-width: 600px) {
-			margin: 80px 0 0 0;
-			grid-template-rows: 1fr;
-			grid-template-columns: 1fr 1fr 1fr;
 			grid-gap: 40px;
-
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 1fr;
+			margin-top: 80px;
 		}
 		@media (min-width: $screen-md) {
 			grid-gap: 0;
-			margin: 0;
+			margin-top: 0;
 		}
 	}
-
-	&__dot-element {
-		position: absolute;
+	&__pattern {
 		bottom: -20px;
 		left: 50%;
+		position: absolute;
 		transform: translateX(-825px);
 	}
 }

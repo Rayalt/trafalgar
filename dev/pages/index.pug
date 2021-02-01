@@ -1,108 +1,6 @@
 extends ../pug/layout_default.pug
 
 block content
-	//-.grid
-		.grid__row
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-			.grid__col.grid__col_xs-1
-				.unit 01
-		.grid__row
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-			.grid__col.grid__col_sm-1
-				.unit 01
-		.grid__row
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-			.grid__col.grid__col_md-1
-				.unit 01
-		.grid__row
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-			.grid__col.grid__col_lg-1
-				.unit 01
-
 	//-.overlay
 		.grid
 			.grid__row
@@ -132,113 +30,79 @@ block content
 					.unit 01
 
 	nav.side-nav
-		.side-nav__inner
-			.side-nav__header
-				svg.icon.icon__logo-mini.icon__logo-mini_white
-					use(xlink:href='/img/svgSprite.svg#icon__logo-mini-w')
-				.side-nav__close-menu
-					svg.icon.icon__close-menu
-						use(xlink:href='/img/svgSprite.svg#icon__close-menu')
-			nav.side-nav__nav
-				a.side-nav__item.side-nav__item_active(href='#') Home
-				a.side-nav__item(href='#') Find a doctor
-				a.side-nav__item(href='#') Apps
-				a.side-nav__item(href='#') Testimonials
-				a.side-nav__item(href='#') About us
-
-	header.header
-		.header__inner
-			.grid
-				.grid__row
-					.grid__col.grid__col_lg-12
-						.header__content
-							svg.icon.icon__logo-mini
-								use(xlink:href='/img/svgSprite.svg#icon__logo-mini')
-							nav.header__nav
-								a.header__item.header__item_active(href='#') Home
-								a.header__item(href='#') Find a doctor
-								a.header__item(href='#') Apps
-								a.header__item(href='#') Testimonials
-								a.header__item(href='#') About us
-							.header__menu
-								svg.icon.icon__menu
-									use(xlink:href='/img/svgSprite.svg#icon__menu')
-
+		.side-nav__header
+			svg.svg.side-nav__logo
+				use(xlink:href='/img/svgSprite.svg#icon__logo_mini')
+			svg.svg.side-nav__cross
+				use(xlink:href='/img/svgSprite.svg#icon__close-menu')
+		nav.side-nav__nav
+			a.side-nav__item.side-nav__item_active(href='#') Home
+			a.side-nav__item(href='#') Find a doctor
+			a.side-nav__item(href='#') Apps
+			a.side-nav__item(href='#') Testimonials
+			a.side-nav__item(href='#') About us
 	section.hero
-		.hero__inner
-			.grid
-				.grid__row
-					.grid__col.grid__col_sm-6.grid__col_md-6.grid__col_lg-5
-						.hero__content
-							h1.hero__heading Virtual healthcare for you
-							p.hero__descr Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
-							.hero__button
-								a.button.button__solid(href='#') Consult today
-			img.hero__bg-element(src='/img/bg__element_blue.png' alt='Background element')
+		.grid
+			.grid__row
+				.grid__col.grid__col_sm-6.grid__col_md-6.grid__col_lg-5
+					.hero__content
+						h1.hero__heading Virtual healthcare for you
+						p.hero__descr Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
+						a.button.button_solid.hero__button(href='#') Consult today
+		img.hero__bg-pattern(src='/img/bg__pattern_blue.png' alt='Background element')
 		img.hero__img(src='/img/img__hero.png' alt='Illustration of the electrocardiogramm')
-
 	section.services
-		.services__inner
-			.grid
-				.grid__row
-					.grid__col.grid__col_lg-10.col-offset__lg-1
-						h2.services__heading Our services
-						p.services__heading-descr We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health
-					.grid__col.grid__col_md-12
-						.services__card-grid
-							+card([
-									{
-																icon: 'search',
-																alt: 'Search icon',
-																title: 'Search doctor',
-																descr: 'Choose your doctor from thousands of specialist, general, and trusted hospitals'
-									}
-								])
-							+card([
-									{
-																icon: 'pharmacy',
-																alt: 'Pharmacy icon',
-																title: 'Online pharmacy',
-																descr: 'Buy your medicines with our mobile application with a simple delivery system'
-									}
-								])
-							+card([
-									{
-																icon: 'consultation',
-																alt: 'Consultation icon',
-																title: 'Consultation',
-																descr: 'Free consultation with our trusted doctors and get the best recomendations'
-									}
-								])
-							+card([
-									{
-																icon: 'info',
-																alt: 'Info icon',
-																title: 'Details info',
-																descr: 'Free consultation with our trusted doctors and get the best recomendations'
-									}
-								])
-							+card([
-									{
-																icon: 'care',
-																alt: 'Emergency care icon',
-																title: 'Emergency care',
-																descr: 'You can get 24/7 urgent care for yourself or your children and your lovely family'
-									}
-								])
-							+card([
-									{
-															icon: 'tracking',
-															alt: 'Tracking icon',
-															title: 'Tracking',
-															descr: 'Track and save your medical history and health data '
-									}
-								])
-			img.services__bg.services__bg_organic-shape(src='/img/img__bg-organic-shape.png' alt='Background element')
-			img.services__bg.services__bg_dot-element(src='/img/bg__element_blue.png' alt='Background element')
-			.services__button
-				a.button.button__bordered(href='#') Learn more
-
+		.grid
+			.grid__row
+				.grid__col.grid__col_lg-10.col-offset__lg-1
+					h2.services__heading Our services
+					p.services__heading-descr We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health
+			.grid__row
+				.grid__col.grid__col_md-12
+					.services__card-grid
+						+servises-card([
+								{
+									icon: 'search',
+									alt: 'Search icon',
+									title: 'Search doctor',
+									descr: 'Choose your doctor from thousands of specialist, general, and trusted hospitals'
+								},
+								{
+									icon: 'pharmacy',
+									alt: 'Pharmacy icon',
+									title: 'Online pharmacy',
+									descr: 'Buy your medicines with our mobile application with a simple delivery system'
+								},
+								{
+									icon: 'consultation',
+									alt: 'Consultation icon',
+									title: 'Consultation',
+									descr: 'Free consultation with our trusted doctors and get the best recomendations'
+								},
+								{
+									icon: 'info',
+									alt: 'Info icon',
+									title: 'Details info',
+									descr: 'Free consultation with our trusted doctors and get the best recomendations'
+								},
+								{
+									icon: 'care',
+									alt: 'Emergency care icon',
+									title: 'Emergency care',
+									descr: 'You can get 24/7 urgent care for yourself or your children and your lovely family'
+								},
+								{
+									icon: 'tracking',
+									alt: 'Tracking icon',
+									title: 'Tracking',
+									descr: 'Track and save your medical history and health data'
+								}
+							])
+			.grid__row
+				.grid__col.grid__col_md-12
+					a.button.button_bordered.services__button(href='#') Learn more
+		img.services__bg.services__bg_organic-shape(src='/img/img__bg-organic-shape.png' alt='Background element')
+		img.services__bg.services__bg_pattern(src='/img/bg__pattern_blue.png' alt='Background element')
 	section.stages
 		.stages__inner
 			.grid
@@ -247,8 +111,7 @@ block content
 						.stages__content
 							h3.stages__heading Leading healthcare providers
 							p.stages__descr Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver
-							.stages__button
-								a.button.button__bordered(href='#') Learn more
+							a.button.button_bordered.stages__button(href='#') Learn more
 			img.stages__img.stages__img_odd(src='/img/img__healthcare.png' alt='')
 		.stages__inner
 			.grid
@@ -257,68 +120,82 @@ block content
 						.stages__content
 							h3.stages__heading Download our mobile apps
 							p.stages__descr Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely
-							.stages__button
-								a.button.button__bordered(href='#') Download
-									svg.icon.icon__arrow.icon__arrow_download
-										use(xlink:href='/img/svgSprite.svg#icon__arrow')
+							a.button.button_bordered.button_anim_down.stages__button(href='#') Download
+								svg.button__icon
+									use(xlink:href='/img/svgSprite.svg#icon__arrow-down')
 			img.stages__img.stages__img_even(src='/img/img__download.png' alt='')
-		img.stages__bg-element(src='/img/bg__element_blue.png' alt='Background element')
-
+		img.stages__pattern(src='/img/bg__pattern_blue.png' alt='Background element')
 	section.slider
 		.grid
 			.grid__row
 				.grid__col.grid__col_lg-12
-					.swiper-container.slider__container
-						.swiper-wrapper.slider__inner
-							.swiper-slide.slider__slide
-								.slider__heading What our slider are saying
-								.slider__content
-									.slider__profile
-										.slider__avatar
-											img.slider__avatar-img(src='/img/img__avatar_1x.jpg' srcset='/img/img__avatar_2x.jpg 2x' alt='Customer avatar')
-										.slider__data
-											.slider__name Edward Newgate
-											.slider__position Founder Circle
-									.slider__citation “Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”
-							.swiper-slide.slider__slide
-								.slider__heading Slide 2
-							.swiper-slide.slider__slide
-								.slider__heading Slide 3
-							.swiper-slide.slider__slide
-								.slider__heading Slide 4
+					.slider__inner
+						.swiper-container.slider__container
+							.swiper-wrapper.slider__wrapper
+								.swiper-slide.slider__slide
+									+slider([
+												{
+													img: 'avatar-edward-newgate',
+													name: 'Edward Newgate',
+													position: 'Founder Circle',
+													citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+												}
+											])
+								.swiper-slide.slider__slide
+									+slider([
+												{
+													img: 'avatar-edward-newgate',
+													name: 'Edward Newgate',
+													position: 'Founder Circle',
+													citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+												}
+											])
+								.swiper-slide.slider__slide
+									+slider([
+												{
+													img: 'avatar-edward-newgate',
+													name: 'Edward Newgate',
+													position: 'Founder Circle',
+													citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+												}
+											])
+								.swiper-slide.slider__slide
+									+slider([
+												{
+													img: 'avatar-edward-newgate',
+													name: 'Edward Newgate',
+													position: 'Founder Circle',
+													citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+												}
+											])
+							img.slider__pattern.slider__pattern_inner(src='/img/bg__pattern_grey.png' alt='Background element')
 						.swiper-pagination.slider__pagination
 						.swiper-button-prev.slider__button-prev
-							svg.icon.icon__nav-arrow.icon__nav-arrow_back
-								use(xlink:href='/img/svgSprite.svg#icon__arrow')
+							svg.svg.slider__icon
+								use(xlink:href='/img/svgSprite.svg#icon__arrow-right')
 						.swiper-button-next.slider__button-next
-							svg.icon.icon__nav-arrow.icon__nav-arrow_forward
-								use(xlink:href='/img/svgSprite.svg#icon__arrow')
-						img.slider__dot-element.slider__dot-element_inner(src='/img/bg__element_grey.png' alt='Background element')
-		img.slider__dot-element.slider__dot-element_outer(src='/img/bg__element_blue.png' alt='Background element')
+							svg.svg.slider__icon
+								use(xlink:href='/img/svgSprite.svg#icon__arrow-right')
+		img.slider__pattern.slider__pattern_outer(src='/img/bg__pattern_blue.png' alt='Background element')
 	section.articles
-		.articles__inner
-			.grid
-				.grid__row
-					.grid__col.grid__col_lg-12
-						h2.articles__heading Check out our latest article
-						.articles__card-grid
-							+articles([
+		.grid
+			.grid__row
+				.grid__col.grid__col_lg-12
+					h2.articles__heading Check out our latest article
+					.articles__card-grid
+							+articles-card([
 										{
 											img: 'analys',
 											alt: 'Test collection',
 											title: 'Disease detection, check up in the laboratory',
 											descr: 'In this case, the role of the health laboratory is very important to do a disease detection...'
-										}
-									])
-							+articles([
+										},
 										{
 											img: 'lab',
 											alt: 'Laboratory man',
 											title: 'Herbal medicines that are safe for consumption',
 											descr: 'Herbal medicine is very widely used at this time because of its very good for your health...'
-										}
-									])
-							+articles([
+										},
 										{
 											img: 'mask',
 											alt: 'Woman with face mask',
@@ -326,52 +203,9 @@ block content
 											descr: 'A healthy lifestyle should start from now and also for your skin health. There are some...'
 										}
 									])
-			.articles__button
-				a.button.button__bordered(href='#') View all
+			.grid__row
+				.grid__col.grid__col_md-12
+					a.button.button_bordered.articles__button(href='#') View all
 		img.articles__bg.articles__bg_organic-shape(src='/img/img__bg-organic-shape.png' alt='Background element')
-		img.articles__bg.articles__bg_dot-element(src='/img/bg__element_blue.png' alt='Background element')
-		img.articles__bg.articles__bg_bottom-dot-element(src='/img/bg__element_blue.png' alt='Background element')
-
-	footer.footer
-		.footer__inner
-			.grid
-				.grid__row
-					.grid__col.col-order__xs-2.grid__col_sm-10.grid__col_md-5.grid__col_lg-5
-						.footer__info
-							.footer__logo
-								svg.icon.icon__logo-maxi
-									use(xlink:href='/img/svgSprite.svg#icon__logo-maxi')
-							p.footer__about Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
-							p.footer__copy ©Trafalgar PTY LTD 2020. All rights reserved
-					.grid__col.grid__col_sm-10.grid__col_md-6.col-order__sm-3.col-offset__md-1.grid__col_lg-6.col-offset__lg-1
-						.footer__links-grid
-							.footer-links
-								+footer-links('Company',
-									[
-										{link: 'About', href: '#'},
-										{link: 'Testimonials', href: '#'},
-										{link: 'Find a doctor', href: '#'},
-										{link: 'Apps', href: '#'}
-									]
-								)
-							.footer-links
-								+footer-links('Region',
-									[
-										{link: 'Indonesia', href: '#'},
-										{link: 'Singapore', href: '#'},
-										{link: 'Hongkong', href: '#'},
-										{link: 'Canada', href: '#'}
-									]
-								)
-							.footer-links
-								+footer-links('Help',
-									[
-										{link: 'Help center', href: '#'},
-										{link: 'Contact support', href: '#'},
-										{link: 'Instructions', href: '#'},
-										{link: 'How it works', href: '#'}
-									]
-								)
-			img.footer__dot-element(src='/img/bg__element_blue.png' alt='Background element')
-
-	.page__blackout
+		img.articles__bg.articles__bg_pattern-top(src='/img/bg__pattern_blue.png' alt='Background element')
+		img.articles__bg.articles__bg_pattern-bottom(src='/img/bg__pattern_blue.png' alt='Background element')

@@ -3,58 +3,59 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .button {
-	text-align: center;
-	display: flex;
 	align-items: center;
-	width: 180px;
-	text-decoration: none;
+	border-radius: 55px;
+	display: flex;
 	font-size: 15px;
 	line-height: 112%;
 	padding: 14px 0;
-	border-radius: 55px;
+	text-align: center;
+	text-decoration: none;
+	width: 180px;
 	@media (min-width: $screen-md) {
+		font-size: 18px;
 		padding: 18px 0;
 		width: 200px;
-		font-size: 18px;
 	}
-	&__solid {
-		justify-content: center;
+	&_solid {
 		background-color: var(--color-blue);
-		transition: all .25s ease;
 		color: var(--color-typography-inverse);
+		justify-content: center;
+		transition: all .25s ease;
 		&:hover {
-			color: var(--color-typography);
 			background-color: var(--color-lightblue);
+			color: var(--color-blue);
 		}
 	}
-	&__bordered {
-		justify-content: center;
+	&_bordered {
 		border: 1px solid var(--color-blue);
 		color: var(--color-blue);
+		justify-content: center;
 		transition: all .25s ease;
 		&:hover {
-			color: var(--color-typography);
-			border: 1px solid var(--color-typography);
-			background-color: var(--color-lightblue);
+			background: var(--color-lightblue);
 			.icon__arrow_download {
-				fill: var(--color-typography);
 				animation: arrow-down 1s infinite ease;
 			}
 		}
 	}
-	&__ghost {
-		color: var(--color-blue);
-		&:hover {
-			color: var(--color-heading);
-			.icon__arrow_readmore {
-				fill: var(--color-heading);
-				animation: arrow-right 1.2s infinite ease;
-			}
+	&__icon {
+		fill: inherit;
+		height: 14px;
+		margin-left: 16px;
+		width: 14px;
+	}
+	&_anim_down:hover {
+		.button__icon {
+			animation: arrow-down 1s infinite ease;
 		}
-		
+	}
+	&_anim_right:hover {
+		.button__icon {
+			animation: arrow-right 1s infinite ease;
+		}
 	}
 }
-
 @keyframes arrow-down {
 	0% {
 		transform: translateY(-1px);
@@ -64,5 +65,16 @@
 	}
 	100% {
 		transform: translateY(0px);
+	}
+}
+@keyframes arrow-right {
+	0% {
+		transform: translateX(1px);
+	}
+	50% {
+		transform: translateX(5px);
+	}
+	100% {
+		transform: translateX(0px);
 	}
 }

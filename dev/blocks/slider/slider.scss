@@ -3,33 +3,32 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .slider {
-	//border-radius: 24px;
-	padding: 50px 0 80px 0;
-	
-	//height: 100%;
-	position: relative;
-	
 	overflow: hidden;
+	padding: 50px 0 80px 0;
+	position: relative;
 	@media (min-width: $screen-sm) {
 		padding: 80px 0 90px 0;
 	}
 	@media (min-width: $screen-lg) {
 		padding: 168px 0 121px 0;
 	}
-
 	&__container {
-		padding-bottom: 62px;
-	}
-
-	&__inner {
-	}
-
-	&__slide {
 		background: var(--bg-gradient);
-		position: relative;
 		border-radius: 24px;
+	}
+	&__inner {
+		border-radius: 24px;
+		padding-bottom: 62px;
+		position: relative;
+	}
+	&__wrapper {
+		height: 100%;
+	}
+	&__slide {
+		height: 100%;
 		overflow: hidden;
 		padding: 32px;
+		position: relative;
 		@media (min-width: $screen-sm) {
 			padding: 48px 64px;
 		}
@@ -37,75 +36,69 @@
 			padding: 64px 114px 79px 122px;
 		}
 	}
-
 	&__heading {
 		@include heading;
 		color: var(--color-typography-inverse);
 		text-align: center;
 		&::after {
-			left: 50%;
-			bottom: -25px;
-			transform: translateX(-50%);
 			background: var(--color-typography-inverse);
+			bottom: -25px;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
-
 	&__content {
+		align-items: center;
+		color: var(--color-typography-inverse);
 		display: flex;
 		flex-direction: column;
-		color: var(--color-typography-inverse);
-		margin: 60px 0 0 0;
-		align-items: center;
+		margin-top: 60px;
 		text-align: center;
 		@media (min-width: $screen-sm) {
-			margin: 80px 0 0 0;
-			text-align: left;
 			align-items: flex-start;
+			margin-top: 80px;
+			text-align: left;
 		}
 		@media (min-width: $screen-md) {
-			flex-direction: row;
 			align-items: center;
+			flex-direction: row;
 		}
 		@media (min-width: $screen-lg) {
-			margin: 104px 0 0 0;
+			margin-top: 104px;
 		}
 	}
-
 	&__profile {
-		display: flex;
 		align-items: center;
+		display: flex;
 		flex-direction: column;
 		@media (min-width: $screen-sm) {
 			flex-direction: row;
 		}
 	}
-
-
 	&__avatar {
-		width: 90px;
-		height: 90px;
-		position: relative;
-		overflow: hidden;
-		border: 4px solid var(--color-white);
 		border-radius: 50%;
+		border: 4px solid var(--color-white);
+		height: 90px;
+		overflow: hidden;
+		position: relative;
+		width: 90px;
 		@media (min-width: $screen-sm) {
-			width: 133px;
 			height: 133px;
+			width: 133px;
 		}
 	}
 	&__avatar-img {
-		width: 200%;
 		height: 200%;
+		left: 50%;
+		object-fit: cover;
 		position: absolute;
 		top: 50%;
-		left: 50%;
 		transform: translate(-45%,-40%);
-		object-fit: cover;
+		width: 200%;
 		@media (min-width: $screen-md) {
 			flex: 0 0 auto;
 		}
 	}
-
 	&__data {
 		margin: 16px 0 0 0;
 		width: 187px;
@@ -113,30 +106,28 @@
 			margin: 0 0 0 29px;
 		}
 	}
-
 	&__name {
 		font-size: 22px;
 		font-weight: 700;
 		line-height: 115%;
-		
 	}
-
 	&__position {
+		color: var(--color-typography-inverse);
 		font-weight: 400;
 		line-height: 115%;
 		margin: 8px 0 0 0;
-		color: rgba(255, 255, 255, .85);
+		opacity: .85;
 		@media (min-width: $screen-sm) {
 			margin: 16px 0 0 0;
 		}
 	}
-
 	&__citation {
+		color: var(--color-typography-inverse);
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 157%;
-		color: rgba(255, 255, 255, .9);
 		margin: 16px 0 0 0;
+		opacity: .9;
 		@media (min-width: $screen-md) {
 			margin: 32px 0 0 0;
 		}
@@ -148,24 +139,24 @@
 			margin: 0 0 0 110px;
 		}
 	}
-
-	&__dot-element {
+	&__pattern {
+		display: none;
+		height: auto;
+		pointer-events: none;
 		position: absolute;
 		width: 107px;
-		height: auto;
-		display: none;
 		@media (min-width: $screen-sm) {
 			display: block;
 		}
 		@media (min-width: $screen-md) {
-			width: 132px;
 			height: auto;
+			width: 132px;
 		}
 		&_outer {
-			z-index: -1;
 			bottom: 230px;
 			left: 50%;
 			transform: translateX(-375px);
+			z-index: -1;
 			@media (min-width: $screen-md) {
 				transform: translateX(-495px);
 			}
@@ -174,39 +165,57 @@
 			}
 		}
 		&_inner {
-			z-index: 1;
-			top: -14px;
 			right: -40px;
+			top: -14px;
+			z-index: 1;
 			@media (min-width: $screen-md) {
 				right: -51px;
 			}
 		}
 	}
-
 	&__dot {
 		background: var(--color-blue);
 		opacity: .4;
+		& + & {
+			margin-left: 10px;
+		}
+		@media (min-width: $screen-md) {
+			& + & {
+				margin-left: 18px;
+			}
+		}
 		&_active {
 			opacity: 1;
 		}
 	}
+	&__pagination {
+		bottom: 12px;
+		justify-content: center;
+		width: 100%;
+	}
+	&__icon {
+		height: 30px;
+		width: 30px;
+	}
 	&__button-prev,
 	&__button-next {
-		top: auto;
 		bottom: 4px;
+		height: 30px;
 		left: 50%;
+		opacity: .5;
 		right: auto;
-		width: 42px;
-		height: 28px;
+		top: auto;
+		transition: all .25s ease;
 		&::after {
 			content: none;
 		}
+		&:hover {
+			opacity: 1;
+		}
 	}
-
 	&__button-prev {
-		transform: translateX(-140px);
+		transform: translateX(-140px) rotate(180deg);
 	}
-
 	&__button-next {
 		transform: translateX(100px);
 	}

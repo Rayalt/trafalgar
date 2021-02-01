@@ -1,60 +1,53 @@
-// В этом файле должны быть стили для БЭМ-блока card, его элементов,
+// В этом файле должны быть стили для БЭМ-блока servises-card, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.card {
+.servises-card {
+	align-items: center;
 	background-color: var(--color-white);
 	border-radius: 20px;
 	box-shadow: 10px 40px 50px 0 var(--shadow-color);
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column;
 	height: 100%;
-
-	&__icon {
-		display: flex;
-		align-items: center;
+	padding: 40px 30px 35px 20px;
+	text-align: center;
+	@media (min-width: 600px) {
+		align-items: flex-start;
+		flex-direction: row;
+		padding: 40px 40px;
+		text-align: left;
 	}
-
-	&__inner {
-		display: flex;
+	@media (min-width: $screen-sm) {
 		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		height: 100%;
 		padding: 40px 30px 35px 20px;
-		@media (min-width: 600px) {
-			flex-direction: row;
-			text-align: left;
-			align-items: flex-start;
-			padding: 40px 40px;
-			
-		}
-		@media (min-width: $screen-sm) {
-			padding: 40px 30px 35px 20px;
-			flex-direction: column;
-		}
-		@media (min-width: $screen-md) {
-			padding: 60px 50px 55px 40px;
-			
-		}
 	}
-
+	@media (min-width: $screen-md) {
+		padding: 60px 50px 55px 40px;
+	}
+	&__icon {
+		display: inline-block;
+	}
 	&__title {
 		@include card-title;
 		margin: 20px 0 0 0;
 		@media (min-width: 600px) {
-			margin: 0;
+			margin: 0 0 0 30px;
 		}
 		@media (min-width: $screen-sm) {
 			margin: 20px 0 0 0;
 		}
 	}
-
 	&__card-descr {
 		@include card-descr;
+		margin: 14px 0 0 0;
+		@media (min-width: 600px) {
+			margin: 14px 0 0 30px;
+		}
+		@media (min-width: $screen-sm) {
+			margin: 14px 0 0 0;
+		}
 	}
-
 	&__text {
 		@media (min-width: 600px) {
 			margin: 0 0 0 30px;
@@ -63,5 +56,4 @@
 			margin: 0;
 		}
 	}
-
 }

@@ -1,0 +1,52 @@
+// В этом файле должны быть стили для БЭМ-блока articles-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.articles-card {
+	background-color: var(--color-white);
+	border-radius: 10px;
+	box-shadow: 10px 40px 50px 0 var(--shadow-color);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	@media (min-width: $screen-md) {
+		border-radius: 20px;
+	}
+	&__img {
+		display: block;
+		flex: 0 0 auto;
+		height: auto;
+		width: 100%;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		padding: 16px 16px 24px 16px;
+		@media (min-width: $screen-md) {
+			padding: 24px 24px 35px 24px;
+		}
+	}
+	&__title {
+		@include card-title;
+		flex: 0 0 auto;
+		margin: 24px 0 0 0;
+	}
+	&__descr {
+		@include card-descr;
+		flex: 1 1 auto;
+		margin: 12px 0 25px;
+	}
+	&__link {
+		align-items: center;
+		color: var(--color-blue);
+		display: flex;
+		text-decoration: none;
+		&:hover {
+			color: var(--color-heading);
+			.button__icon {
+				fill: var(--color-heading);
+			}
+		}
+	}
+}

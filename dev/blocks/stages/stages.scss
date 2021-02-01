@@ -3,9 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .stages {
-	position: relative;
 	overflow: hidden;
 	padding: 50px 0;
+	position: relative;
 	@media (min-width: $screen-sm) {
 		padding: 80px 0 100px 0;
 	}
@@ -13,14 +13,14 @@
 		min-height: 1270px;
 		padding: 179px 0 136px 0;
 	}
-	
+
 	&__inner {
-		position: relative;
-		overflow: hidden;
 		display: flex;
 		flex-direction: column-reverse;
+		overflow: hidden;
+		position: relative;
 		& + & {
-			margin: 100px 0 0 0;
+			margin-top: 100px;
 		}
 		@media (min-width: $screen-sm) {
 			flex-direction: row;
@@ -31,60 +31,55 @@
 		@media (min-width: $screen-lg) {
 			padding: 50px 0;
 			& + & {
-				margin: 298px 0 0 0;
+				margin-top: 298px;
 			}
 		}
 	}
-
 	&__content {
-		padding: 30px 0 0 0;
-		text-align: center;
+		align-items: center;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		padding: 30px 0 0 0;
+		text-align: center;
 		@media (min-width: $screen-sm) {
 			align-items: flex-start;
-			text-align: left;
 			padding: 0;
+			text-align: left;
 		}
 	}
-
 	&__heading {
 		@include heading;
 		&::after {
+			bottom: -30px;
 			left: 50%;
 			transform: translateX(-50%);
-			bottom: -30px;
 			@media (min-width: $screen-sm) {
 				left: 0;
 				transform: translateX(0);
 			}
 		}
 	}
-
 	&__descr {
 		@include main-descr;
 		margin: 61px 0 0 0;
 	}
-
 	&__button {
-		margin: 40px 0 0 0;
+		margin-top: 40px;
 		transition: all .5s ease;
 	}
-
 	&__img {
-		width: 300px;
 		height: auto;
 		margin: 0 auto;
+		width: 300px;
 		@media (min-width: 600px) {
-			width: 479px;
 			height: auto;
+			width: 479px;
 		}
 		@media (min-width: $screen-sm) {
-			margin: 0;
-			width: 360px;
 			height: auto;
+			margin: 0;
 			position: absolute;
+			width: 360px;
 			&_even {
 				left: 50%;
 				transform: translateX(10px);
@@ -95,8 +90,8 @@
 			}
 		}
 		@media (min-width: $screen-md) {
-			width: 479px;
 			height: auto;
+			width: 479px;
 			&_odd {
 				transform: translateX(-15px);
 			}
@@ -105,30 +100,29 @@
 			}
 		}
 		@media (min-width: $screen-lg) {
-			width: 665px;
 			height: auto;
+			width: 665px;
 			&_even {
 				transform: translateX(-28px);
 			}
 		}
 	}
-
-	&__bg-element {
-		position: absolute;
+	&__pattern {
+		height: auto;
 		left: 50%;
+		position: absolute;
 		top: 600px;
 		transform: translateX(170px);
 		width: 107px;
-		height: auto;
 		@media (min-width: $screen-sm) {
 			top: 450px;
 			transform: translateX(340px);
 		}
 		@media (min-width: $screen-md) {
-			width: 132px;
 			height: auto;
 			top: 500px;
 			transform: translateX(460px);
+			width: 132px;
 		}
 		@media (min-width: $screen-lg) {
 			top: 650px;
