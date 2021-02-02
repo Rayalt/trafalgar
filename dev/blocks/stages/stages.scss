@@ -59,36 +59,36 @@
 	}
 	&__img {
 		height: auto;
-		width: 300px;
-		position: relative;
 		left: 50%;
+		position: relative;
 		transform: translateX(-50%);
+		width: 300px;
 		@media (min-width: 600px) {
 			height: auto;
 			width: 479px;
 		}
 		@media (min-width: $screen-sm) {
-			position: absolute;
 			height: auto;
-			width: 360px;
+			position: absolute;
 			transform: translateX(-160px);
+			width: 360px;
 			&_reverse {
 				transform: translateX(-200px);
 			}
 		}
 		@media (min-width: $screen-md) {
 			height: auto;
-			width: 479px;
 			transform: translateX(-200px);
+			width: 479px;
 			&_reverse {
 				transform: translateX(-280px);
 			}
 		}
 		@media (min-width: $screen-lg) {
 			height: auto;
-			width: 665px;
 			top: -40px;
 			transform: translateX(-260px);
+			width: 665px;
 			&_reverse {
 				transform: translateX(-430px);
 			}
