@@ -1,0 +1,6 @@
+//- Все примеси в этом файле должны начинаться c имени блока (main-nav)
+
+mixin main-nav(vars)
+	nav.main-nav
+		each item in vars
+			a.main-nav__item(class= item.class, href= item.href)!= item.link

@@ -1,9 +1,9 @@
 //- Все примеси в этом файле должны начинаться c имени блока (footer-links)
 
-mixin footer-links(title, items)
+mixin footer-links(title, vars)
 	.footer-links
 		.footer-links__heading= title
 		ul.footer-links__list
-			each item, index in items
+			each item in vars
 				li.footer-links__item
 					a.footer-links__link(href= item.href)!= item.link

@@ -1,9 +1,9 @@
 //- Все примеси в этом файле должны начинаться c имени блока (slider)
 
-mixin slider(vars)
+mixin slider(vars, title='What our customers are saying')
 	each item in vars
 		.swiper-slide.slider__slide
-			.slider__heading What our customers are saying
+			.slider__heading= title
 			.slider__content
 				.slider__profile
 					.slider__avatar

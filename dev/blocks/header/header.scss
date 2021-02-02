@@ -27,23 +27,6 @@
 			display: flex;
 		}
 	}
-	&__item {
-		color: var(--color-typography);
-		text-decoration: none;
-		transition: color .5s ease;
-		& + & {
-			margin: 0 0 0 30px;
-		}
-		@media (min-width: $screen-md) {
-			& + & {
-				margin: 0 0 0 40px;
-			}
-		}
-		&_active {
-			color: var(--color-active);
-			font-weight: 700;
-		}
-	}
 	&__menu {
 		fill: var(--color-blue);
 		height: 48px;

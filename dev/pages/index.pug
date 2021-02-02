@@ -1,7 +1,7 @@
 extends ../pug/layout_default.pug
 
 block content
-	.overlay
+	//-.overlay
 		.grid
 			.grid__row
 				.grid__col.grid__col_sm-1
@@ -35,12 +35,13 @@ block content
 				use(xlink:href='/img/svgSprite.svg#icon__logo_mini')
 			svg.svg.side-nav__cross
 				use(xlink:href='/img/svgSprite.svg#icon__close-menu')
-		nav.side-nav__nav
-			a.side-nav__item.side-nav__item_active(href='#') Home
-			a.side-nav__item(href='#') Find a doctor
-			a.side-nav__item(href='#') Apps
-			a.side-nav__item(href='#') Testimonials
-			a.side-nav__item(href='#') About us
+		+main-nav([
+					{link: 'Home', href: '#', class: 'main-nav__item_active'},
+					{link: 'Find a doctor', href: '#'},
+					{link: 'Apps', href: '#'},
+					{link: 'Testimonials', href: '#'},
+					{link: 'About us', href: '#'}
+				])
 	section.hero
 		.grid
 			.grid__row.grid__row_mobile
@@ -53,7 +54,6 @@ block content
 					.hero__img-container
 						img.hero__img(src='/img/img__hero.png' alt='Illustration of the electrocardiogramm')
 		img.hero__bg-pattern(src='/img/bg__pattern_blue.png' alt='Background element')
-
 	section.services
 		.grid
 			.grid__row

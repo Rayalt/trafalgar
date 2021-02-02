@@ -40,19 +40,6 @@
 		padding: 4px;
 		width: 41px;
 	}
-	&__nav {
-		display: grid;
-		grid-gap: 30px;
-		margin: auto 0;
-	}
-	&__item {
-		color: var(--color-typography-inverse);
-		text-decoration: none;
-		transition: color .5s ease;
-		&_active {
-			font-weight: 700;
-		}
-	}
 	&__cross {
 		fill: var(--color-white) !important;
 		height: 48px;

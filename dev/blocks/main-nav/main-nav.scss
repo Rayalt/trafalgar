@@ -1,0 +1,34 @@
+// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main-nav {
+	display: grid;
+	grid-gap: 30px;
+	margin: auto 0;
+	@media (min-width: $screen-md) {
+		display: flex;
+	}
+	&__item {
+		color: var(--color-typography-inverse);
+		text-decoration: none;
+		transition: color .5s ease;
+		@media (min-width: $screen-md) {
+			color: var(--color-typography);
+			& + & {
+				margin: 0 0 0 30px;
+			}
+		}
+		@media (min-width: $screen-lg) {
+			& + & {
+				margin: 0 0 0 40px;
+			}
+		}
+		&_active {
+			font-weight: 700;
+			@media (min-width: $screen-md) {
+				color: var(--color-active);
+			}
+		}
+	}
+}
