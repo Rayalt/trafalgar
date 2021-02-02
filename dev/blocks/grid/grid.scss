@@ -7,7 +7,6 @@
     &__row {
         @include row();
     }
-
     &__col {
         @include col();
         &_xs-1 {
@@ -83,7 +82,6 @@
         &_sm-12 {
             @include col(sm, 12);
         }
-
         &_md-1 {
             @include col(md, 1);
         }
@@ -120,7 +118,6 @@
         &_md-12 {
             @include col(md, 12);
         }
-
         &_lg-1 {
             @include col(lg, 1, $grid-columns, 36px);
         }
@@ -159,7 +156,6 @@
         }
     }
 }
-
 .col-offset {
     &__xs-0 {
         @include col-offset(xs, 0, $grid-columns);
@@ -200,7 +196,6 @@
     &__xs-12 {
         @include col-offset(xs, 12, $grid-columns);
     }
-
     &__sm-0 {
         @include col-offset(sm, 0, $grid-columns);
     }
@@ -240,7 +235,6 @@
     &__sm-12 {
         @include col-offset(sm, 12, $grid-columns);
     }
-
     &__md-0 {
         @include col-offset(md, 0, $grid-columns);
     }
@@ -280,7 +274,6 @@
     &__md-12 {
         @include col-offset(md, 12, $grid-columns);
     }
-
     &__lg-0 {
         @include col-offset(lg, 0, $grid-columns);
     }
@@ -321,7 +314,6 @@
         @include col-offset(lg, 12, $grid-columns);
     }
 }
-
 .col-order {
     &__xs-1 {
         @include col-order(xs, 1);
@@ -359,7 +351,6 @@
     &__xs-12 {
         @include col-order(xs, 12);
     }
-
     &__sm-1 {
         @include col-order(sm, 1);
     }
@@ -396,4 +387,17 @@
     &__sm-12 {
         @include col-order(sm, 12);
     }
+}
+
+//optional styles
+.grid__row_mobile {
+	flex-direction: column-reverse;
+	@media (min-width: $screen-sm) {
+		flex-direction: row;
+	}
+}
+.grid__row_reverse {
+	@media (min-width: $screen-sm) {
+		flex-direction: row-reverse;
+	}
 }

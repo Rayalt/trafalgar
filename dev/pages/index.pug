@@ -1,7 +1,7 @@
 extends ../pug/layout_default.pug
 
 block content
-	//-.overlay
+	.overlay
 		.grid
 			.grid__row
 				.grid__col.grid__col_sm-1
@@ -43,14 +43,17 @@ block content
 			a.side-nav__item(href='#') About us
 	section.hero
 		.grid
-			.grid__row
+			.grid__row.grid__row_mobile
 				.grid__col.grid__col_sm-6.grid__col_md-6.grid__col_lg-5
 					.hero__content
 						h1.hero__heading Virtual healthcare for you
 						p.hero__descr Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
 						a.button.button_solid.hero__button(href='#') Consult today
+				.grid__col.grid__col_sm-6.grid__col_md-6.grid__col_lg-7
+					.hero__img-container
+						img.hero__img(src='/img/img__hero.png' alt='Illustration of the electrocardiogramm')
 		img.hero__bg-pattern(src='/img/bg__pattern_blue.png' alt='Background element')
-		img.hero__img(src='/img/img__hero.png' alt='Illustration of the electrocardiogramm')
+
 	section.services
 		.grid
 			.grid__row
@@ -106,16 +109,18 @@ block content
 	section.stages
 		.stages__inner
 			.grid
-				.grid__row
-					.grid__col.grid__col_sm-6.grid__col_md-5.col-offset__md-7
+				.grid__row.grid__row_mobile.grid__row_reverse
+					.grid__col.grid__col_sm-6.grid__col_md-5
 						.stages__content
 							h3.stages__heading Leading healthcare providers
 							p.stages__descr Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver
 							a.button.button_bordered.stages__button(href='#') Learn more
-			img.stages__img.stages__img_odd(src='/img/img__healthcare.png' alt='')
+					.grid__col.grid__col_sm-6.grid__col_md-7
+						.stages__img-container
+							img.stages__img.stages__img_reverse(src='/img/img__healthcare.png' alt='')
 		.stages__inner
 			.grid
-				.grid__row
+				.grid__row.grid__row_mobile
 					.grid__col.grid__col_sm-6.grid__col_md-5
 						.stages__content
 							h3.stages__heading Download our mobile apps
@@ -123,7 +128,9 @@ block content
 							a.button.button_bordered.button_anim_down.stages__button(href='#') Download
 								svg.button__icon
 									use(xlink:href='/img/svgSprite.svg#icon__arrow-down')
-			img.stages__img.stages__img_even(src='/img/img__download.png' alt='')
+					.grid__col.grid__col_sm-6.grid__col_md-7
+						.stages__img-container
+							img.stages__img(src='/img/img__download.png' alt='')
 		img.stages__pattern(src='/img/bg__pattern_blue.png' alt='Background element')
 	section.slider
 		.grid
@@ -132,42 +139,32 @@ block content
 					.slider__inner
 						.swiper-container.slider__container
 							.swiper-wrapper.slider__wrapper
-								.swiper-slide.slider__slide
-									+slider([
-												{
-													img: 'avatar-edward-newgate',
-													name: 'Edward Newgate',
-													position: 'Founder Circle',
-													citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
-												}
-											])
-								.swiper-slide.slider__slide
-									+slider([
-												{
-													img: 'avatar-edward-newgate',
-													name: 'Edward Newgate',
-													position: 'Founder Circle',
-													citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
-												}
-											])
-								.swiper-slide.slider__slide
-									+slider([
-												{
-													img: 'avatar-edward-newgate',
-													name: 'Edward Newgate',
-													position: 'Founder Circle',
-													citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
-												}
-											])
-								.swiper-slide.slider__slide
-									+slider([
-												{
-													img: 'avatar-edward-newgate',
-													name: 'Edward Newgate',
-													position: 'Founder Circle',
-													citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
-												}
-											])
+								+slider([
+											{
+												img: 'avatar-edward-newgate',
+												name: 'Edward Newgate',
+												position: 'Founder Circle',
+												citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+											},
+											{
+												img: 'avatar-edward-newgate',
+												name: 'Edward Newgate',
+												position: 'Founder Circle',
+												citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+											},
+											{
+												img: 'avatar-edward-newgate',
+												name: 'Edward Newgate',
+												position: 'Founder Circle',
+												citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+											},
+											{
+												img: 'avatar-edward-newgate',
+												name: 'Edward Newgate',
+												position: 'Founder Circle',
+												citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+											}
+										])
 							img.slider__pattern.slider__pattern_inner(src='/img/bg__pattern_grey.png' alt='Background element')
 						.swiper-pagination.slider__pagination
 						.swiper-button-prev.slider__button-prev

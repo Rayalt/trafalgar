@@ -10,26 +10,13 @@
 		padding: 80px 0 100px 0;
 	}
 	@media (min-width: $screen-lg) {
-		min-height: 1270px;
 		padding: 179px 0 136px 0;
 	}
-
 	&__inner {
-		display: flex;
-		flex-direction: column-reverse;
-		overflow: hidden;
-		position: relative;
 		& + & {
 			margin-top: 100px;
 		}
-		@media (min-width: $screen-sm) {
-			flex-direction: row;
-		}
-		@media (min-width: $screen-md) {
-			align-items: center;
-		}
 		@media (min-width: $screen-lg) {
-			padding: 50px 0;
 			& + & {
 				margin-top: 298px;
 			}
@@ -67,43 +54,43 @@
 		margin-top: 40px;
 		transition: all .5s ease;
 	}
+	&__img-container {
+		position: relative;
+	}
 	&__img {
 		height: auto;
-		margin: 0 auto;
 		width: 300px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 		@media (min-width: 600px) {
 			height: auto;
 			width: 479px;
 		}
 		@media (min-width: $screen-sm) {
-			height: auto;
-			margin: 0;
 			position: absolute;
+			height: auto;
 			width: 360px;
-			&_even {
-				left: 50%;
-				transform: translateX(10px);
-			}
-			&_odd {
-				right: 50%;
-				transform: translateX(370px);
+			transform: translateX(-160px);
+			&_reverse {
+				transform: translateX(-200px);
 			}
 		}
 		@media (min-width: $screen-md) {
 			height: auto;
 			width: 479px;
-			&_odd {
-				transform: translateX(-15px);
-			}
-			&_even {
-				transform: translateX(20px);
+			transform: translateX(-200px);
+			&_reverse {
+				transform: translateX(-280px);
 			}
 		}
 		@media (min-width: $screen-lg) {
 			height: auto;
 			width: 665px;
-			&_even {
-				transform: translateX(-28px);
+			top: -40px;
+			transform: translateX(-260px);
+			&_reverse {
+				transform: translateX(-430px);
 			}
 		}
 	}
@@ -114,6 +101,10 @@
 		top: 600px;
 		transform: translateX(170px);
 		width: 107px;
+		@media (min-width: 600px) {
+			top: 700px;
+			transform: translateX(240px);
+		}
 		@media (min-width: $screen-sm) {
 			top: 450px;
 			transform: translateX(340px);
@@ -130,3 +121,4 @@
 		}
 	}
 }
+
