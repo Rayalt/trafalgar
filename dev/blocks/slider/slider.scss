@@ -214,9 +214,11 @@
 		}
 	}
 	&__button-prev {
+		outline: none;
 		transform: translateX(-140px) rotate(180deg);
 	}
 	&__button-next {
+		outline: none;
 		transform: translateX(100px);
 	}
 }
