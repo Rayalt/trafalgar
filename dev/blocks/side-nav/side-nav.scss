@@ -34,6 +34,19 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	&__body-wrapper {
+		display: flex;
+		flex-direction: column;
+		height: calc(100% - 24px);
+		justify-content: center;
+		overflow: hidden;
+	}
+	&__body {
+		-webkit-overflow-scrolling: touch;
+		overflow: hidden;
+		overflow-y: auto;
+		padding: 24px 0;
+	}
 	&__logo {
 		fill: var(--color-white) !important;
 		height: 41px;

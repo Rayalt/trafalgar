@@ -1,41 +1,16 @@
 extends ../pug/layout_default.pug
 
 block content
-	//-.overlay
-		.grid
-			.grid__row
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
-				.grid__col.grid__col_sm-1
-					.unit 01
 
 	nav.side-nav
 		.side-nav__header
 			svg.svg.side-nav__logo
-				use(xlink:href='/img/svgSprite.svg#icon__logo_mini')
+				use(xlink:href='img/svgSprite.svg#icon__logo_mini')
 			svg.svg.side-nav__cross
-				use(xlink:href='/img/svgSprite.svg#icon__close-menu')
-		+main-nav([
+				use(xlink:href='img/svgSprite.svg#icon__close-menu')
+		.side-nav__body-wrapper
+			.side-nav__body
+				+main-nav([
 					{link: 'Home', href: '#', class: 'main-nav__item_active'},
 					{link: 'Find a doctor', href: '#'},
 					{link: 'Apps', href: '#'},
@@ -52,8 +27,8 @@ block content
 						a.button.button_solid.hero__button(href='#') Consult today
 				.grid__col.grid__col_sm-6.grid__col_md-6.grid__col_lg-7
 					.hero__img-container
-						img.hero__img(src='/img/img__hero.png' alt='Illustration of the electrocardiogramm')
-		img.hero__bg-pattern(src='/img/bg__pattern_blue.png' alt='Background element')
+						img.hero__img(src='img/img__hero.png' alt='Illustration of the electrocardiogramm')
+		img.hero__bg-pattern(src='img/bg__pattern_blue.png' alt='Background element')
 	section.services
 		.grid
 			.grid__row
@@ -64,48 +39,48 @@ block content
 				.grid__col.grid__col_md-12
 					.services__card-grid
 						+servises-card([
-								{
-									icon: 'search',
-									alt: 'Search icon',
-									title: 'Search doctor',
-									descr: 'Choose your doctor from thousands of specialist, general, and trusted hospitals'
-								},
-								{
-									icon: 'pharmacy',
-									alt: 'Pharmacy icon',
-									title: 'Online pharmacy',
-									descr: 'Buy your medicines with our mobile application with a simple delivery system'
-								},
-								{
-									icon: 'consultation',
-									alt: 'Consultation icon',
-									title: 'Consultation',
-									descr: 'Free consultation with our trusted doctors and get the best recomendations'
-								},
-								{
-									icon: 'info',
-									alt: 'Info icon',
-									title: 'Details info',
-									descr: 'Free consultation with our trusted doctors and get the best recomendations'
-								},
-								{
-									icon: 'care',
-									alt: 'Emergency care icon',
-									title: 'Emergency care',
-									descr: 'You can get 24/7 urgent care for yourself or your children and your lovely family'
-								},
-								{
-									icon: 'tracking',
-									alt: 'Tracking icon',
-									title: 'Tracking',
-									descr: 'Track and save your medical history and health data'
-								}
-							])
+							{
+								icon: 'search',
+								alt: 'Search icon',
+								title: 'Search doctor',
+								descr: 'Choose your doctor from thousands of specialist, general, and trusted hospitals'
+							},
+							{
+								icon: 'pharmacy',
+								alt: 'Pharmacy icon',
+								title: 'Online pharmacy',
+								descr: 'Buy your medicines with our mobile application with a simple delivery system'
+							},
+							{
+								icon: 'consultation',
+								alt: 'Consultation icon',
+								title: 'Consultation',
+								descr: 'Free consultation with our trusted doctors and get the best recomendations'
+							},
+							{
+								icon: 'info',
+								alt: 'Info icon',
+								title: 'Details info',
+								descr: 'Free consultation with our trusted doctors and get the best recomendations'
+							},
+							{
+								icon: 'care',
+								alt: 'Emergency care icon',
+								title: 'Emergency care',
+								descr: 'You can get 24/7 urgent care for yourself or your children and your lovely family'
+							},
+							{
+								icon: 'tracking',
+								alt: 'Tracking icon',
+								title: 'Tracking',
+								descr: 'Track and save your medical history and health data'
+							}
+						])
 			.grid__row
 				.grid__col.grid__col_md-12
 					a.button.button_bordered.services__button(href='#') Learn more
-		img.services__bg.services__bg_organic-shape(src='/img/img__bg-organic-shape.png' alt='Background element')
-		img.services__bg.services__bg_pattern(src='/img/bg__pattern_blue.png' alt='Background element')
+		img.services__bg.services__bg_organic-shape(src='img/img__bg-organic-shape.png' alt='Background element')
+		img.services__bg.services__bg_pattern(src='img/bg__pattern_blue.png' alt='Background element')
 	section.stages
 		.stages__inner
 			.grid
@@ -117,7 +92,7 @@ block content
 							a.button.button_bordered.stages__button(href='#') Learn more
 					.grid__col.grid__col_sm-6.grid__col_md-7
 						.stages__img-container
-							img.stages__img.stages__img_reverse(src='/img/img__healthcare.png' alt='')
+							img.stages__img.stages__img_reverse(src='img/img__healthcare.png' alt='')
 		.stages__inner
 			.grid
 				.grid__row.grid__row_mobile
@@ -127,11 +102,11 @@ block content
 							p.stages__descr Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely
 							a.button.button_bordered.button_anim_down.stages__button(href='#') Download
 								svg.button__icon
-									use(xlink:href='/img/svgSprite.svg#icon__arrow-down')
+									use(xlink:href='img/svgSprite.svg#icon__arrow-down')
 					.grid__col.grid__col_sm-6.grid__col_md-7
 						.stages__img-container
-							img.stages__img(src='/img/img__download.png' alt='')
-		img.stages__pattern(src='/img/bg__pattern_blue.png' alt='Background element')
+							img.stages__img(src='img/img__download.png' alt='')
+		img.stages__pattern(src='img/bg__pattern_blue.png' alt='Background element')
 	section.slider
 		.grid
 			.grid__row
@@ -140,69 +115,69 @@ block content
 						.swiper-container.slider__container
 							.swiper-wrapper.slider__wrapper
 								+slider([
-											{
-												img: 'avatar-edward-newgate',
-												name: 'Edward Newgate',
-												position: 'Founder Circle',
-												citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
-											},
-											{
-												img: 'avatar-edward-newgate',
-												name: 'Edward Newgate',
-												position: 'Founder Circle',
-												citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
-											},
-											{
-												img: 'avatar-edward-newgate',
-												name: 'Edward Newgate',
-												position: 'Founder Circle',
-												citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
-											},
-											{
-												img: 'avatar-edward-newgate',
-												name: 'Edward Newgate',
-												position: 'Founder Circle',
-												citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
-											}
-										])
-							img.slider__pattern.slider__pattern_inner(src='/img/bg__pattern_grey.png' alt='Background element')
+									{
+										img: 'avatar-edward-newgate',
+										name: 'Edward Newgate',
+										position: 'Founder Circle',
+										citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+									},
+									{
+										img: 'avatar-edward-newgate',
+										name: 'Edward Newgate',
+										position: 'Founder Circle',
+										citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+									},
+									{
+										img: 'avatar-edward-newgate',
+										name: 'Edward Newgate',
+										position: 'Founder Circle',
+										citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+									},
+									{
+										img: 'avatar-edward-newgate',
+										name: 'Edward Newgate',
+										position: 'Founder Circle',
+										citation: '“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”'
+									}
+								])
+							img.slider__pattern.slider__pattern_inner(src='img/bg__pattern_grey.png' alt='Background element')
 						.swiper-pagination.slider__pagination
 						.swiper-button-prev.slider__button-prev
 							svg.svg.slider__icon
-								use(xlink:href='/img/svgSprite.svg#icon__arrow-right')
+								use(xlink:href='img/svgSprite.svg#icon__arrow-right')
 						.swiper-button-next.slider__button-next
 							svg.svg.slider__icon
-								use(xlink:href='/img/svgSprite.svg#icon__arrow-right')
-		img.slider__pattern.slider__pattern_outer(src='/img/bg__pattern_blue.png' alt='Background element')
+								use(xlink:href='img/svgSprite.svg#icon__arrow-right')
+		img.slider__pattern.slider__pattern_outer(src='img/bg__pattern_blue.png' alt='Background element')
 	section.articles
 		.grid
 			.grid__row
 				.grid__col.grid__col_lg-12
 					h2.articles__heading Check out our latest article
 					.articles__card-grid
-							+articles-card([
-										{
-											img: 'analys',
-											alt: 'Test collection',
-											title: 'Disease detection, check up in the laboratory',
-											descr: 'In this case, the role of the health laboratory is very important to do a disease detection...'
-										},
-										{
-											img: 'lab',
-											alt: 'Laboratory man',
-											title: 'Herbal medicines that are safe for consumption',
-											descr: 'Herbal medicine is very widely used at this time because of its very good for your health...'
-										},
-										{
-											img: 'mask',
-											alt: 'Woman with face mask',
-											title: 'Natural care for healthy facial skin',
-											descr: 'A healthy lifestyle should start from now and also for your skin health. There are some...'
-										}
-									])
+						+articles-card([
+							{
+								img: 'analys',
+								alt: 'Test collection',
+								title: 'Disease detection, check up in the laboratory',
+								descr: 'In this case, the role of the health laboratory is very important to do a disease detection...'
+							},
+							{
+								img: 'lab',
+								alt: 'Laboratory man',
+								title: 'Herbal medicines that are safe for consumption',
+								descr: 'Herbal medicine is very widely used at this time because of its very good for your health...'
+							},
+							{
+								img: 'mask',
+								alt: 'Woman with face mask',
+								title: 'Natural care for healthy facial skin',
+								descr: 'A healthy lifestyle should start from now and also for your skin health. There are some...'
+							}
+						])
 			.grid__row
 				.grid__col.grid__col_md-12
 					a.button.button_bordered.articles__button(href='#') View all
-		img.articles__bg.articles__bg_organic-shape(src='/img/img__bg-organic-shape.png' alt='Background element')
-		img.articles__bg.articles__bg_pattern-top(src='/img/bg__pattern_blue.png' alt='Background element')
-		img.articles__bg.articles__bg_pattern-bottom(src='/img/bg__pattern_blue.png' alt='Background element')
+		img.articles__bg.articles__bg_organic-shape(src='img/img__bg-organic-shape.png' alt='Background element')
+		img.articles__bg.articles__bg_pattern-top(src='img/bg__pattern_blue.png' alt='Background element')
+		img.articles__bg.articles__bg_pattern-bottom(src='img/bg__pattern_blue.png' alt='Background element')
